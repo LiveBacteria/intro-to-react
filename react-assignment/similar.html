@@ -11,19 +11,28 @@
 		
 	</div>
 	<script type="text/babel">
+		let i = 1;
 		class Welcome extends React.Component {
+		constructor(props){
+		super(props);
+		this.state = {
+		info: "Rendered:"
+	}
+	}
 		render() {
 			return(
 				<div>
 					<h1>
-						This is another submission for Bloc - Components 
+						This is another submission for Bloc - Components
 					</h1>
+					<h2>
+						{this.state.info} {this.props.count} times!
+					</h2>
 				</div>
 			);
 		}
 	}
-
-	ReactDOM.render(<Welcome />, document.querySelector("#app"));
+	ReactDOM.render(<Welcome count={i} id='{i}' />, document.querySelector("#app"));
 	</script>
 </body>
 </html>
