@@ -25,14 +25,14 @@
 					<h1>
 						This is another submission for Bloc - Components
 					</h1>
-					<h2 id={this.props.i}>
+					<h2 id={this.props.id}>
 						{this.state.info} {this.props.count} times!
 					</h2>
 				</div>
 			);
 		}
 	}
-	ReactDOM.render(<Welcome count={i} id='{i}' />, document.querySelector("#app"));
+	ReactDOM.render(<Welcome count={i} id={i} />, document.querySelector("#app"));
 	</script>
 </body>
 </html>
